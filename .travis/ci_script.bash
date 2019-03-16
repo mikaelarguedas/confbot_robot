@@ -3,12 +3,12 @@ set -e
 
 cd $ROS2_WS
 
-# Installing crystal packages on nightly may lead to problem, commenting out for now
 # install dependencies
 rosdep update && apt-get -qq update && rosdep install -y \
   --from-paths src \
   --ignore-src \
-  --rosdistro $ROS_DISTRO
+  --rosdistro $ROS_DISTRO \
+  --skip-keys sros2_cmake
 
 # setup ros2 environment
 source "/opt/ros/$ROS_DISTRO/setup.bash"
