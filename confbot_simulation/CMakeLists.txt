@@ -6,6 +6,8 @@ find_package(ament_cmake REQUIRED)
 
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME})
+install(PROGRAMS ${PROJECT_NAME}/urdf_spawner.py
+  DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
