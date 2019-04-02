@@ -27,8 +27,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <!--mesh filename="package://confbot_description/meshes/confbot.dae"/-->
-        <mesh filename="file:///media/mikatchou/ROS/ros2/roscon2019/roscon2019_ws/install/share/confbot_description/meshes/confbot.dae"/>
+        <mesh filename="package://confbot_description/meshes/confbot.dae"/>
       </geometry>
     </visual>
   </link>
