@@ -26,11 +26,12 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='True')
+    world = os.path.join(
+        get_package_share_directory('confbot_simulation'), 'world', 'basic_world.world')
     launch_file_dir = os.path.join(get_package_share_directory('confbot_bringup'), 'launch')
-
     return LaunchDescription([
         ExecuteProcess(
-            cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_factory.so'],
+            cmd=['gazebo', '--verbose', world, '-s', 'libgazebo_ros_factory.so'],
             output='screen'),
 
         ExecuteProcess(

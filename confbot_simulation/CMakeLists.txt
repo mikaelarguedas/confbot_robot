@@ -4,7 +4,7 @@ project(confbot_simulation)
 # find dependencies
 find_package(ament_cmake REQUIRED)
 
-install(DIRECTORY launch
+install(DIRECTORY launch world
   DESTINATION share/${PROJECT_NAME})
 install(PROGRAMS ${PROJECT_NAME}/urdf_spawner.py
   DESTINATION lib/${PROJECT_NAME})
