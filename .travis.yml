@@ -2,7 +2,7 @@ services:
   - docker
 
 install:
-  - git clone --quiet --depth 1 https://github.com/mikaelarguedas/ros2ci.git .ros2ci
+  - git clone --quiet --depth 1 https://github.com/mikaelarguedas/ros2ci.git .ros2ci -b install-colcon-core-master
   - cp additional_repos.repos .ros2ci/
 
 matrix:
