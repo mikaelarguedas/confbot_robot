@@ -7,6 +7,7 @@ jobs:
     strategy:
       matrix:
         env:
+          - {DOCKER_IMAGE: "osrf/ros2:nightly", UPSTREAM_WORKSPACE: additional_repos.repos}
           - {ROS_DISTRO: dashing, ROS_REPO: testing}
           - {ROS_DISTRO: dashing, ROS_REPO: main}
     runs-on: ubuntu-latest
